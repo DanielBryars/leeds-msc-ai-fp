@@ -1,5 +1,6 @@
-This is your new *vault*.
 
-Make a note of something, [[create a link]], or try [the Importer](https://help.obsidian.md/Plugins/Importer)!
+One view is to use Fusion, so one model creates everything, I think this seems quite hard to me.
 
-When you're ready, delete this note and make the vault your own.
+I'd favour a more hirearchical model.
+
+
