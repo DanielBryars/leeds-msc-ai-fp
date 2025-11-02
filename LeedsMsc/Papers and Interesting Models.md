@@ -30,3 +30,8 @@ https://www.bmvc2021-virtualconference.com/assets/papers/1400.pdf
 
 AnyDexGrasp (the two-stage learning approach)
 [AnyDexGrasp](https://graspnet.net/anydexgrasp/)
+
+
+[Implicit Behavioral Cloning](https://proceedings.mlr.press/v164/florence22a.html)
+
+[Paper page - A Dataset for Interactive Vision-Language Navigation with Unknown Command Feasibility](https://huggingface.co/papers/2202.02312)
