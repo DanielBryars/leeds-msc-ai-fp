@@ -5,3 +5,8 @@ https://github.com/Physical-Intelligence/openpi
 
 [2407.07726](https://arxiv.org/pdf/2407.07726)
 
+[π0 and π0-FAST: Vision-Language-Action Models for General Robot Control](https://huggingface.co/blog/pi0)
+
+
+
+
