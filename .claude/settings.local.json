@@ -4,7 +4,10 @@
       "Bash(mkdir:*)",
       "WebSearch",
       "Bash(wget:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:papers.nips.cc)",
+      "WebFetch(domain:paperswithcode.com)"
     ],
     "deny": [],
     "ask": []
