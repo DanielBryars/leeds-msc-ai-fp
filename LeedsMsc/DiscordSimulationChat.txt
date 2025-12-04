@@ -1,0 +1,379 @@
+Pratham Jain — 29/08/2025 22:23
+i had trained the model for 100000 steps but now i am unable to evaluate the trained policy
+was performing this https://huggingface.co/docs/lerobot/il_sim
+Waterfeeling — 01/09/2025 10:40
+I have encountered similar problem. In my case (on Ubuntu 22.04), it turns out to be the issue with the displaying issue, I switched to the X11 server and the problem was resolved.
+raul_ml — 02/09/2025 12:38
+In the simulator, if the task fails, (i.e: it drops the red cube) why does the robot continue with the task? In theory it should go fetch the red cube, shouldn't it? 
+simeneide — 02/09/2025 18:13
+Hi! We're a group that wanted to run the imitation learning tutorial this evening, but we both ended up with mujoco/openGL issues. we're both running m4 macs, is this a common issue?
+
+Does there exist any non-mujoco simulators with some tutorials instead? Or if people know this as a known issue, solutions? Im happy to provide errors logs 😄
+
+
+➜  lerobot git:(main) ✗ uv run mjpython -m lerobot.scripts.rl.gym_manipulator --config_path config.json
+failed to dlopen path '/Users/simen.eide@schibsted.com/Sync/aiklubb/lerobot/.venv/bin/python3': dlopen(/Users/simen.eide@schibsted.com/Sync/aiklubb/lerobot/.venv/bin/python3, 0x000A): Library not loaded: @executable_path/../lib/libpython3.10.dylib
+  Referenced from: <4C4C44EE-5555-3144-A1A0-28739E256A39> /Users/simen.eide@schibsted.com/.local/share/uv/python/cpython-3.10.14-macos-aarch64-none/bin/python3.10
+  Reason: tried: '/Users/simen.eide@schibsted.com/Sync/aiklubb/lerobot/.venv/lib/python3.10/site-packages/mujoco/MuJoCo (mjpython).app/Contents/lib/libpython3.10.dylib' (no such file)
+raul_ml — 05/09/2025 11:54
+Hi HF, any change we could get some answers? Please help us 🙂
+ 
+kp91 — 05/09/2025 15:11
+Has anyone successfully simulated the LeKiwi robot in Maniskill?
+StoneT2000 — 05/09/2025 18:18
+not that i know of but i can advise on how to add it @kp91 
+kp91 — 07/09/2025 01:29
+I was able to get position control of a lekiwi bot working! Will post my results in a bit
+Grigorij — 07/09/2025 13:41
+Position control? You mean you implemented some navigation? 😮
+kp91 — 07/09/2025 15:34
+Keyboard teleop position control lol. My goal is to create sim only datasets for various tasks with LeKiwi
+Moyai — 11/09/2025 16:42
+i was able to setup this to allow me to run the simulation remotely then view the result in browser through webrtc
+this way i don't have to worry about the compute
+marieth9555 — 13/09/2025 21:53
+Hi everyone,
+I’m trying to train a policy in simulation with lerobot https://huggingface.co/docs/lerobot/hilserl_sim using the configuration file train_gym_hil_env.json. I already configured my file as follows (shortened for clarity):  "policy": {
+  "type": "sac",
+  "device": "cpu",
+  "input_features": {
+    "front": {
+      "type": "VISUAL",
+      "shape": [3, 128, 128],
+      "source": "observation.images.front"
+    },
+    "wrist": {
+      "type": "VISUAL",
+      "shape": [3, 128, 128],
+      "source": "observation.images.wrist"
+    },
+    "state": {
+      "type": "STATE",
+      "shape": [18],
+      "source": "observation.state"
+    }
+  }
+} When I run: mjpython -m lerobot.scripts.train --config_path config/train_sac_arrange_boxes.json
+ I get the following error:  policy.input_features.front: The fields source are not valid for PolicyFeature
+ It looks like source is not a valid field anymore for PolicyFeature.
+❓
+ My question: how should I properly map the observation keys (observation.images.front, observation.images.wrist, etc.) in the input_features section under the current API?
+This is my complete file .
+{
+  "output_dir": "outputs/arrange_boxes_sac",
+  "job_name": "arrange_boxes_sac",
+  "seed": 42,
+  "steps": 100000,
+  "batch_size": 256,
+Expand
+train_sac_arrange_boxes.json
+2 KB
+bonmot
+ started a thread: any idea why episodes are getting. See all threads. — 14/09/2025 11:04
+DrDisentangle — 14/09/2025 16:19
+First it didn't work for me but now it does. Note that after a few seconds a new episode starts and you have to press space again. 
+dumbnoob — 15/09/2025 11:53
+I'm training a π0 policy (from the LeRobot policy folder) in aloha sim env using the lerobot/aloha-sim-insertion-human dataset. However, I'm getting a zero percent success rate with a training loss converging around 0.02.
+While looking for debugging resources, I've referenced the hyperparameters from both Openpi and the LeRobot repository. Below are the parameters I considered important (all others are set to their defaults):
+TOKENIZERS_PARALLELISM="false" python -m lerobot.scripts.train \
+    --dataset.root=/dataset/aloha_sim_insertion_human \
+    --dataset.repo_id=lerobot/aloha_sim_insertion_human \
+    --env.type=aloha \
+    --env.task=AlohaInsertion-v0 \
+    --policy.type=pi0 \
+    --policy.n_obs_steps=1 \
+    --policy.chunk_size=2 \  # 25Hz. I have tried different frequencies: 10Hz, 1Hz, but got the same results
+    --policy.n_action_steps=2 \  # Use all steps predicted in chunk
+    --policy.empty_cameras=2 \  # No cameras on arms
+    --policy.adapt_to_pi_aloha=false \  # I assume the dataset on HF has already been converted. I have tried both veraions but both gives me zero SR. 
+    --policy.use_delta_joint_actions_aloha=false \  # Only for real-life ALOHA setup
+    --policy.freeze_vision_encoder=true \
+    --policy.train_expert_only=true \  # VL representations should be frozen while f, I suppose this is true.
+    --policy.train_state_proj=true \ 
+    --num_workers=2 \
+    --batch_size=15 \  # For maximum CUDA allocation
+    --steps=100000 \  # Train for 100k steps
+    --use_policy_training_preset=true
+
+I've also added some notes in the code snippet above. I would greatly appreciate any insight into whether I've made any conceptual mistakes in my setup. >_< 
+dumbnoob — 16/09/2025 02:17
+all the failed results look like this after training for 100k. 😮‍💨
+ 
+Arhen — 17/09/2025 02:56
+Hi everyone!
+
+I'm starting a project to training VLA models for the ​SO-101 robotic arm , and plan to use a simulated environment. 
+ Is there any  planned timeline for adding the SO-101 to the gym-hil framework?
+
+Thanks in advance for any advice or guidance you can offer!
+adityabhas_22 — 19/09/2025 18:32
+Hey guys, the imitation learning tutorial seems to be broken after a PR yesterday, could somebody please help me out? 
+The grippers just don't seem to work anymore in Mujuco.
+Pepijn Kooijmans @HF LeRobot — 20/09/2025 18:52
+cc @Michel Aractingi @HF LeRobot
+matrix — 23/09/2025 12:08
+🤯
+ Is teleoperation the bottleneck for scaling your robot learning models?
+
+so101-autogen is a new framework to create large-scale manipulation datasets by fully automating the data generation process. No more slow, manual demonstrations.
+
+Watch how it generates training data without a human-in-the-loop! 👇
+
+
+GitHub: https://github.com/haoran1062/so101-autogen
+
+✨
+ Special thanks to leisaac for the amazing 3D assets and for code inspiration!
+raul_ml — 25/09/2025 15:46
+Question: In the simulator, if the task fails, (i.e: it drops the red cube) why does the robot continue with the task? In theory it should go fetch the red cube, shouldn't it?
+matrix — 26/09/2025 03:31
+I think there are two possibilities here:
+
+First, my guess is that the VLA model predicts a long "chunk" of actions (say, 50-100 steps) all at once and then just executes that sequence. If that's the case, it can't really react when it drops the cube midway through; it just has to inertially finish the pre-planned sequence.
+
+Second, I'm also thinking it's a training data issue. The dataset is likely filled with perfect, successful examples. The model has literally never learned the right way to behave after dropping something. So when it encounters this "error state" it has never seen before, it just defaults to continuing the only plan it knows.
+
+So, based on that, here's a suggestion I was thinking of to test my theory: what if we were to collect some training data that specifically shows the robot dropping the cube and then picking it up again to recover? I'm curious if that would be enough to teach it this error-correction skill.
+
+Just some of my thoughts, hope it helps the discussion.
+dsvschvhm — 30/09/2025 05:47
+I met similar problem on real robot. I collected some episodes doing task: push the object to (stable) sticker position. training a model using such dataset
+Then I evaluate the model with different object and different random sticker position.
+When I do random sticker position with same object, it behaves like trying to push the object to old position and then go on pushing. But can't stop. this is becuz the model only learn push to one position, it doesn' know sticker position. So I changed this by collecting more random sticker position and training(fine-tune). It works.
+But working on different object is hard. The model see the old object at old position as an end scene. So it may push the new object to sticker position but still trying to push.Even when the new object stand at right position, the model will try to push it to other place. Only when I put back the old object and put it at sticker place, the robot calm down finally.
+
+I think even in simulated environment, generalization still means u should give it some failure example 😛
+I met similar problem on real robot. I
+1 Message ›
+There are no recent messages in this thread.
+Grigorij
+ started a thread: I met similar problem on real robot. I. See all threads. — 30/09/2025 12:02
+SiegeLord
+
+ — 30/09/2025 23:52
+In the MuJoCo specification of SO-101 I see backlash specified here: https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.xml#L26C21-L26C29
+
+...but it's not used anywhere, am I missing something?
+dunnowhatname — 02/10/2025 19:20
+Hi, I am having problem with installation for IL simulation. I followed all the instruction  in LeRobot website but stuck at "Teleoperate and Record a Dataset" part. It says that I need to use a configuration file. Where is the configuration file or do I need to create it by myself?
+Nahid — 03/10/2025 01:07
+Anyone here have used Issacsim 5.0? Which GPU do I need?
+DrDisentangle — 03/10/2025 12:06
+Has anyone used Infinigen Indoors to create random scenes for training? Which physics engine did you use?
+Grigorij — 03/10/2025 13:34
+maybe it mean calibration config file. I suggest to ensure that your calibration is ok and saved correctly
+dunnowhatname — 03/10/2025 21:50
+i tried and it is still the same error. What does the command specifically do?
+dunnowhatname — 04/10/2025 03:35
+can anyone help me on running simulation using wsl2? I cant run the sim and I don't know where I did wrong
+Grigorij — 06/10/2025 11:35
+You mean that one?
+Image
+dunnowhatname — 06/10/2025 17:12
+no, it is this one
+Image
+ManuJL
+
+ — 07/10/2025 11:41
+can smolvla work with robosuite simulator
+Grigorij — 08/10/2025 11:51
+Ah, you using hil. I never tried hil so can't say much, but as I understand this is the config of gym simulation envinronment (one with Panda robot)
+dunnowhatname — 08/10/2025 12:55
+I see thank you for the help
+George — 08/10/2025 21:31
+Forwarded
+Hello! I am trying to do some imitation learning in sim following the tutorial here: https://huggingface.co/docs/lerobot/en/il_sim
+When I use the config file here: https://huggingface.co/datasets/lerobot/config_examples/blob/main/sim_il/env_config.json everything runs as expected and I can control the robot in simulation.
+
+LeRobot  •  08/10/2025
+Just wanted to put this here as well. Has anyone had success doing imitation learning in sim on the most recent release?
+fratello — 13/10/2025 03:36
+Hi all, is a simulation env out for the reachy mini? I keep seeing mentions of a simulator for early development before you receive the robot but haven't been able to find a link to it anywhere?
+soulgainer — 14/10/2025 02:52
+hey, guy. I find a error in the docs at https://huggingface.co/docs/lerobot/il_sim
+the example json contains the "type", but it actually should be "name"
+Image
+Michael — 16/10/2025 05:19
+Hello guys! I'm trying to test openVLA model on IsaacSim. Everything is working fine but robot is not reaching to target and only moving along z direction. I assume there is something wrong with converting VLA relative delta output to world frame. I attached a part of the my inference code on IsaacSim.   Could someone please check this conversion is correct or not? Appreciate your help. 
+Image
+jetdillo — 19/10/2025 01:48
+Are you using ROS/ROS2 ? If so, have you looked at the messages from the joint_state_publisher topic or similar topics to see if data for the axes other than Z are being published ? If nothing has crashed and the simulation otherwise seems to be running normally. that suggests to me that data for the other axes are not being populated into ee_position or ee_orientation.
+a — 20/10/2025 05:43
+We’re making a new end to end simulation robot learning framework with around 30 robots (single and bimanual support), 6 tele-operation setups, 25 tasks, imitation learning and reinforcement learning support, ping me if you want to be added to the beta testing list. This is one of the teleop demos on the reach. The white balls you see are the AABB .
+Michael — 20/10/2025 08:22
+Thanks for the suggestion!
+I’m not using ROS/ROS2 in this setup — the inference loop runs directly inside Isaac Sim’s Python API and controller is KinematicsSolver (from franka's  follow_target_with_ik.py example).  The end-effector pose (ee_position, ee_orientation) is fetched from the simulation using get_world_pose(), and I apply the local delta predicted by the VLA model using ee_rot.apply(delta_position). Since only the Z-axis movement is happening, I suspect either the local-to-world conversion (ee_rot.apply(delta_position)) or how the VLA outputs are defined (camera vs. robot frame) might be the issue. Do you think I should verify whether the model’s output deltas are relative to the camera frame instead of the end-effector frame?
+Michael — 20/10/2025 08:27
+Yeah its giving error when you provide this config with "type" but what about to "name": "gym_hil" then?  did you remove it or change its key or something ? 
+jetdillo — 20/10/2025 08:41
+Yeah, I haven't used Isaac Sim outside of ROS2, but that would seem to have the same effect. If the deltas are being computed off the wrong transform, you could still see the same effect(The delta of 0 from 0 being 0). 
+Let me know how that works for you.
+Michael — 20/10/2025 08:46
+I wanted to try DifferentialIKController with IsaacLab but since customizing the environment is challenging and takes time  I'm gonna try with LeRobot in sim first.  +
+jetdillo — 20/10/2025 09:32
+Good luck, let us know how it goes.
+Alli — 21/10/2025 01:28
+Hi everyone! I'm trying to run IL in sim tutorial with suggested config file but the simulation is running a sec and giving an error 
+"    action_features = teleop_device.action_features
+AttributeError: 'NoneType' object has no attribute 'action_features'
+Segmentation fault (core dumped)
+"
+It can't find teleop device ? any help is appreciated 
+"task": "PandaPickCubeKeyboard-v0",
+I'm going to use a keyboard
+Mark Bastourous — 22/10/2025 14:00
+I am having the same issue with hil serl, i think keyboard is not supported for the moment .
+Konstantin Eidelman — 23/10/2025 15:09
+you can use a webrtc by Nvidia
+Konstantin Eidelman — 23/10/2025 15:36
+Hello, do u have some tools to connect server with leader?
+I haven't a good computer, but I have server with powerful gpu. I use WebRTC by nvidia for work with IsaacSim. And leisaac works with it, but only with keyboard. How I need to teleop?
+@Michel Aractingi @HF LeRobot @zeyu.hu（Lightwheel）
+Alli — 24/10/2025 08:17
+I think so
+Nicolo — 24/10/2025 10:41
+Do you mean gym-hil? If so, I remember there was an issue when trying to record a dataset, I resolved by cloning the lerobot tag : v0.3.3 and changing something following an issue on github. If this is what you are problems with let me know, I'll try to find the issue that helped me. 
+
+edit : Look at this one (https://github.com/huggingface/lerobot/issues/2000) 
+julio — 25/10/2025 13:09
+hey, I'm trying the same thing using isaacsim webrtc livestream client. I tried to connect my client to the server on a different network but it doesn't connect. 
+
+Since I am new here, do you have any tutorials that I can follow or suggestions? that would be very helpful for me
+Konstantin Eidelman — 26/10/2025 10:24
+I will write mini-guide for you
+julio — 26/10/2025 12:13
+Thanks!!!
+Konstantin Eidelman — 27/10/2025 07:27
+Mini-guide for remote isaacim #isaac#stream#server#remote
+1) Download Isaac Sim WebRTC Streaming Client: https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html#isaac-sim-latest-release
+2) On the server, run your simulation script with LIVESTREAM=1 (if you in global net) or LIVESTREAM=2 (if you in local net/vpn).
+3) Wait for the message “app is ready” in the terminal.
+4) On the remote computer, open the client, enter the server address (e.g., 172... or 42...), select resolution, and connect.
+
+Example session:
+On the server in isaac dir:
+LIVESTREAM=2 python3 dir/dir/example.py
+# ...
+# [Info] app is ready
+
+On the remote computer:
+Open isaac-sim-webrtc-client.
+Enter: Server Address: 42.16.58.101 (it is example, you need enter you local or global ip of server)
+Resolution: 1280x720
+Click Connect and wait some time 
+julio — 27/10/2025 08:37
+ahh i miss the LIVESTREAM parameter. lemme try.
+Thanks dude 
+julio — 27/10/2025 09:19
+do I need to port forward my router?
+Konstantin Eidelman — 27/10/2025 09:51
+it is not required, i think. You need to decide: you will use local net or global net (if you rent server for example).
+After you need to know what ip of server in global/local net
+And use it 
+shanirevlon123 — 28/10/2025 00:47
+The code is now released at https://github.com/uynitsuj/real2render2real/
+sa74ll — 28/10/2025 05:44
+Hi everyone, I'm trying to evaluate a finetuned smolvla policy on a custom task (using svla_so101_pickplace) within a simulation using lerobot. I've run into issues with the CLI scripts:
+
+lerobot_eval.py fails because it needs an --env.type, but my task isn't one of the built-in types.
+
+lerobot_record.py fails because it requires a --robot.port, even though I want to run in simulation.
+
+Does anyone know the recommended way to configure and launch a simulation environment for evaluation with lerobot_eval for a task defined by a dataset ID like this?
+DrDisentangle — 28/10/2025 19:10
+Which simulator? For example, this script tries to evaluate a finetuned SmolVLA on a MuJoCo setting (but action is erratic). At least it shows how it is done: https://github.com/rwst/misc-robotics-scripts/blob/main/smolvla_mujoco_inference.py
+Grigorij — 29/10/2025 16:47
+I managed to set up simulation envinronment using Unity, and trained SmolVLA in it.
+
+In my opinion Unity has many benefits over other simulators - as simplicity to create any scene or good docs. Also, I case of any symulator you need to learn it to use it, but in case of Unity some of people may know it already. And even if not - knowing Unity may be useful for many other purposes except of robotics simulation.
+
+I would like to hear your feedback on the video. May be useful if you looking for a way how to run lerobot in simulation https://youtu.be/GxiMgpxrkNo 
+Image
+julio — 30/10/2025 06:19
+by any chance are you able to teleoperate remotely in isaac sim server?
+Konstantin Eidelman — 30/10/2025 06:40
+Only keyboard 🙁
+
+But I will try to use info from lekiwi
+Jade @HF LeRobot — 30/10/2025 10:35
+interesting!
+Alexandre Chapin — 06/11/2025 09:43
+Hi, quick question concerning Metaworld, I've been trying to train and evaluate ACT on the metaworld environment but using only visual representation (I remove environment_state from the input). My first experiments do not permit to have a proper working model, do some of you have also tried to train ACT in Metaworld and/or in LIBERO ?
+ssln-027 — 07/11/2025 08:23
+Forwarded
+Hi everyone! I am trying to reproduce the tutorial "Train RL in Simulation" https://huggingface.co/docs/lerobot/hilserl_sim#train-rl-in-simulation. My OS is Ubuntu 22.04. I need to remotely connect to the server. I tried to set MUJOCO_GL to osmesa and glb. I got the following error messages (shown in .txt file). Does anyone know the reason? And how to fix it? Does anyone have the reproducible guidance for training lerobot by using either RL or VLA? I also tried https://huggingface.co/docs/lerobot/libero. failed too
+(lerobot) root@b14-32u:~/sn/lerobot# export MUJOCO_GL=osmesa xvfb-run -a python -m lerobot.rl.gym_manipulator --config_path ./gym_hil_env.json Traceback (most recent call last): File "/root/miniconda3/envs/lerobot/lib/python3.10/runpy.py", line 196, in _run_module_as_main return _run_code(code, main_globals, None, File "/root/miniconda3/envs/lerobot/lib/python3.10/runpy.py", line 86, in _run_code exec(code, run_globals) File "/root/sn/lerobot/src/lerobot/rl/gym_manipulator.py", line 770, in <module> main() File "/root/sn/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner response = fn(cfg, *args, **kwargs) File "/root/sn/lerobot/src/lerobot/rl/gym_manipulator.py", line 754, in main env, teleop_device = make_robot_env(cfg.env) File "/root/sn/lerobot/src/lerobot/rl/gym_manipulator.py", line 313, in make_robot_env import gym_hil # noqa: F401 File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/gym_hil/__init__.py", line 19, in <module> from gym_hil.mujoco_gym_env import FrankaGymEnv, GymRenderingSpec, MujocoGymEnv File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/gym_hil/mujoco_gym_env.py", line 22, in <module> import mujoco File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/mujoco/__init__.py", line 62, in <module> from mujoco.gl_context import * File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/mujoco/gl_context.py", line 38, in <module> from mujoco.osmesa import GLContext as _GLContext File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/mujoco/osmesa/__init__.py", line 31, in <module> from OpenGL import GL File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/OpenGL/GL/__init__.py", line 4, in <module> from OpenGL.GL.VERSION.GL_1_1 import * File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/OpenGL/GL/VERSION/GL_1_1.py", line 14, in <module> from OpenGL.raw.GL.VERSION.GL_1_1 import * File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/OpenGL/raw/GL/VERSION/GL_1_1.py", line 7, in <module> from OpenGL.raw.GL import _errors File "/root/miniconda3/envs/lerobot/lib/python3.10/site-packages/OpenGL/raw/GL/_errors.py", line 4, in <module> _error_checker = _ErrorChecker( _p, _p.GL.glGetError ) AttributeError: 'NoneType' object has no attribute 'glGetError' (lerobot) root@b14-32u:~/sn/lerobot# (lerobot) root@b14-32u:~/sn/lerobot# export MUJOCO_GL=egl xvfb-run -a python -m lerobot.rl.gym_manipulator --config_path ./gym_hil_env.json /root/miniconda3/envs/lerobot/lib/python3.10/site-packages/gymnasium/spaces/box.py:236: UserWarning: WARN: Box low's precision lowered by casting to float32, current low.dtype=float64 gym.logger.warn( /root/miniconda3/envs/lerobot/lib/python3.10/site-packages/gymnasium/spaces/box.py:306: UserWarning: WARN: Box high's precision lowered by casting to float32, current high.dtype=float64 gym.logger.warn( /root/miniconda3/envs/lerobot/lib/python3.10/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81. from pkg_resources import resource_stream, resource_exists ALSA lib confmisc.c:855:(parse_card) cannot find card '0' ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name ALSA lib conf.c:5178:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory ALSA lib conf.c:5701:(snd_config_expand) Evaluate error: No such file or directory ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default No gamepad detected. Please connect a gamepad and try again. libGL error: MESA-LOADER: failed to open swrast: /usr/lib/dri/swrast_dri.so: cannot open shared object file: No such file or directory (search paths /usr/lib/x86_64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri, suffix _dri) libGL error: failed to load driver: swrast /root/miniconda3/envs/lerobot/lib/python3.10/site-packages/glfw/__init__.py:917: GLFWError: (65543) b'GLX: Failed to create context: BadValue (integer parameter out of range for operation)' warnings.warn(message, GLFWError) ERROR: could not create window
+message.txt
+5 KB
+#🙋-help  •  07/11/2025
+Koen — 08/11/2025 03:28
+I just created a basic s0101-arm gym-environment for the EnvHub. 
+
+It is still a work in progress and would love to collaborate with someone to make it a bit more useful. Tips and/or comments are also greatly appreciated 🙂
+ 
+
+https://github.com/JPABotermans/lerobot-gym
+ofiroz91 — 10/11/2025 00:50
+The docs only show an exmaple how to teletop with the API, is there a source how to build an app that records episode with the API (and not via terminal commands?)
+zeyu.hu（Lightwheel） — 11/11/2025 08:02
+Hi.A viable solution may be to develop a script for transmitting USB signals from the local lerobot main arm to a remote server to enable teleoperation.
+IamPhytan — 11/11/2025 14:38
+With the supported benchmarking environments, I wonder if we could use a remote policy server to use lerobot for benchmarking custom policies?
+I found this PR on the repo that could give us such capability: https://github.com/huggingface/lerobot/pull/2330
+Is there any plan to get this merged ?
+zeyu.hu（Lightwheel） — 14/11/2025 06:59
+HI,everyone.We have successfully deployed LeIsaac(LeRobot + IsaacLab) on NVIDIA Brev (cloud platform). Corresponding updates have been made to our webpage Experience LeIsaac with NVIDIA Brev | Leisaac Document, including a tutorial for LeIsaac usage on Brev and recorded demo video.
+gen.exody — 14/11/2025 17:53
+Thanks for sharing! I found that just removing the type parameter also works. as it already has another name parameter. 
+jeanie | SAI — 18/11/2025 21:12
+Hey @everyone 
+
+We built a new open SO-101 Color Sort environment!
+
+It features a color-matching manipulation task with a distractor, built on SAI to give the LeRobot community a standardized setup for training, evaluating, and benchmarking models. 
+
+Check it out and let us know what you think! 
+https://competesai.com/environments/env_f1ZQalvEGGGt
+Jade @HF LeRobot — 19/11/2025 08:43
+Let’s go! Did you upload it to hf envhub ?
+jeanie | SAI — 19/11/2025 14:48
+No, the environment is currently only available on the platform competesai.com but you can upload models using HF! That is a great idea though, I've shared it with my team and we'll definitely discuss putting it on EnvHub. : )
+FrancoC — 20/11/2025 20:52
+Hey there, I've created a Lekiwi simulation using MuJoCo. The idea was to be able to run exactly the same stuff I run with the real robot but in simulation to perform some quick checks, and for example continue using all the LeRobot machinery.
+In this case, you can connect to the simulated lekiwi the same way you connect to the real one (via lerobot.robots.lekiwi.LeKiwiClient )
+
+This is open-sourced here: https://github.com/Ekumen-OS/lekiwi
+This repo targets more than just sim, it also integrates dora to be used as middleware to allow to scale the systems and use cases.
+The idea is to continue growing the examples and usecases, and to provide some RL-based robotic stack to perform given tasks.
+
+Feel free to take a look at it.
+zeyu.hu（Lightwheel） — 21/11/2025 09:51
+We’ve integrated four LeIsaac tasks into LeRobot EnvHub! The doc page (https://lightwheelai.github.io/leisaac/docs/features/envhub_support/) is fully updated with a step-by-step tutorial and demo video. The EnvHub is incredibly convenient — users can now load LeIsaac scenes with just one line of code. We’d love for you to try it out and share any feedback.
+Konstantin Eidelman — 24/11/2025 12:52
+Hello, how in leisaac change robot color?
+zeyu.hu（Lightwheel） — 25/11/2025 03:37
+You can change the robot USD color
+JClinton — 27/11/2025 05:22
+Congratulations with the envhub and LeIsaac integration launch! It's exactly what I've been looking for! 
+
+I'm working on a benchmark for a paper and will be sure to make use of it for max accessibility. 
+
+Now if you could just support some of the robosuite benchmarks that nvidia uses for groot benchmarking that would make my month. 
+Konstantin Eidelman — 27/11/2025 08:58
+I understand, but I need to do it before spawn scene
+Koen — 27/11/2025 15:31
+Hi @JClinton, Which robosuite benchmark are you talking about? I am currently make my own lerobot-gym environment (https://github.com/JPABotermans/lerobot-gym) and would love to make it more accessible.
+JClinton — 27/11/2025 15:54
+RoboCasa Kitchen, DexMimicGen,  GR-1 Tabletop Tasks are what Nvidia Groot N1.5 paper evaluates on. They're robosuite based
+Konstantin Eidelman — 28/11/2025 12:13
+And how to add some custom env? Do you have tutorial?
+Koen — 29/11/2025 18:46
+Today I updated my so101-arm env, I added a hardcoded baseline to verify all the friction coeficients are working properly (integrated with in the HubEnv https://huggingface.co/Koen1995/base-S0101-env)
+
+Tomorrow I want to check whether I can solve the environment using ppo and then see whether I can use that policy to generate data in the Lerobot format. 
+I know that I have posted about this before, but I just wanted to share an update :lerobot_flower:
+Image
+DM — 30/11/2025 04:21
+I am also facing the same problem - any solutions ?
+notcras — 02:36
+does anyone have any good tutorials for mujoco?
