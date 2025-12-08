@@ -1,19 +1,21 @@
+# SmolVLA Architecture
 
-          ┌────────────────────────────────────────┐
+```
+                        ┌────────────────────────────────────────┐
                         │               INPUTS                   │
                         └────────────────────────────────────────┘
 
    Overhead Cam                     Wrist Cam                 Arm State
   (RGB image t)                   (RGB image t)          (joints / EE pose t)
-       │                                │                           │
-       v                                v                           v
+       │                                │                        │
+       v                                v                        v
 ┌───────────────┐              ┌───────────────┐          ┌─────────────────┐
 │ Vision Encoder│              │ Vision Encoder│          │ Proprio Encoder │
 │   (ViT / CNN) │              │   (ViT / CNN) │          │ (MLP / Linear)  │
 └───────────────┘              └───────────────┘          └─────────────────┘
-       │                                │                           │
-       v                                v                           v
-  Img Tokens O_t                    Img Tokens W_t            Proprio Tokens p_t
+       │                                │                        │
+       v                                v                        v
+  Img Tokens O_t                   Img Tokens W_t          Proprio Tokens p_t
 
 
           Natural Language Inputs (Text)
@@ -75,15 +77,15 @@ Time  t-K+1           t-K+2                 …                  t
    ┌────────────────────────────────────────────────────────────────┐
    │        Low-level control outputs at time t (example)          │
    ├────────────────────────────────────────────────────────────────┤
-   │  a_t = [                                                      │
+   │  a_t = [                                                       │
    │    Δq1, Δq2, …, ΔqN,           ← joint deltas or velocities   │
-   │    g_open/close,              ← gripper command               │
-   │    (optional) mode flags      ← e.g. positional vs velocity   │
-   │  ]                                                              │
+   │    g_open/close,               ← gripper command              │
+   │    (optional) mode flags       ← e.g. positional vs velocity  │
+   │  ]                                                             │
    └────────────────────────────────────────────────────────────────┘
-
                                       │
                                       v
                            Robot Controller / Driver
                            (converts a_t into actual
                           motor commands for the arm)
+```
