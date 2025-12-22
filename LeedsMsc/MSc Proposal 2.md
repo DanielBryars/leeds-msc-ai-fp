@@ -47,8 +47,7 @@ The study is:
 
 ## 4. System Architecture
 
-pgsql
-Copy code
+```
               ┌──────────────────────────────┐
               │   Real SO100 Teleoperation   │
               │   • Human-controlled demos   │
@@ -57,13 +56,13 @@ Copy code
                               │
                               ▼
                ┌────────────────────────────┐
-               │   MuJoCo LeRobot-Gym        │
-               │   (github.com/DanielBryars/ │
-               │    lerobot-gym)             │
-               │   • SO100 simulation env    │
-               │   • Teleop + auto-reset     │
-               │   • Calibration debugging   │
-               └──────────────┬──────────────┘
+               │   MuJoCo LeRobot-Gym       │
+               │   (github.com/DanielBryars/│
+               │    lerobot-gym)            │
+               │   • SO100 simulation env   │
+               │   • Teleop + auto-reset    │
+               │   • Calibration debugging  │
+               └──────────────┬─────────────┘
                               │
                               ▼
            ┌─────────────────────────────────────┐
@@ -76,7 +75,7 @@ Copy code
                                  ▼
                 ┌──────────────────────────────────┐
                 │ LLM Linguistic Augmentation      │
-                │ • Paraphrase counts: 1,5,20,100 │
+                │ • Paraphrase counts: 1,5,20,100  │
                 │ • Styles: concise, verbose,      │
                 │   symbolic, hierarchical,        │
                 │   reasoning-based                │
@@ -86,29 +85,27 @@ Copy code
                                 │
     ┌───────────────────────────┼───────────────────────────┐
     ▼                           ▼                           ▼
-┌────────────────┐ ┌─────────────────────┐ ┌─────────────────────┐
-│ Model Variant │ │ Model Variant │ │ Model Variant │
-│ (1 paraphrase) │ │ (20 hierarchical) │ │ (100 mixed styles) │
-└───────┬────────┘ └─────────┬──────────┘ └───────────┬─────────┘
-│ │ │
-▼ ▼ ▼
-┌────────────────┐ ┌─────────────────────┐ ┌─────────────────────┐
-│ Train SmolVLA │ │ Train SmolVLA │ │ Train SmolVLA │
-│ (LeRobot) │ │ │ │ │
-└─────────┬──────┘ └─────────┬──────────┘ └───────────┬─────────┘
-│ │ │
-▼ ▼ ▼
-┌──────────────────────────────────────────────────────────────┐
-│ Evaluation Pipeline (Simulation + Real) │
-│ • Simulation: 200 randomised trials per model │
-│ • Real-world SO100: external validity tests │
-│ • Metrics: success rate, robustness, error types │
-└──────────────────────────────────────────────────────────────┘
+┌───────────────────┐ ┌─────────────────────┐ ┌─────────────────────┐
+│   Model Variant   │ │   Model Variant     │ │   Model Variant     │
+│  (1 paraphrase)   │ │ (20 hierarchical)   │ │ (100 mixed styles)  │
+└─────────┬─────────┘ └──────────┬──────────┘ └──────────┬──────────┘
+          │                      │                       │
+          ▼                      ▼                       ▼
+┌───────────────────┐ ┌─────────────────────┐ ┌─────────────────────┐
+│  Train SmolVLA    │ │   Train SmolVLA     │ │   Train SmolVLA     │
+│    (LeRobot)      │ │                     │ │                     │
+└─────────┬─────────┘ └──────────┬──────────┘ └──────────┬──────────┘
+          │                      │                       │
+          ▼                      ▼                       ▼
+┌─────────────────────────────────────────────────────────────────┐
+│             Evaluation Pipeline (Simulation + Real)             │
+│         • Simulation: 200 randomised trials per model           │
+│         • Real-world SO100: external validity tests             │
+│         • Metrics: success rate, robustness, error types        │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-markdown
-Copy code
-
-Simulation provides the **main** experimental dataset.  
+Simulation provides the **main** experimental dataset.
 The real SO100 robot provides a **small but meaningful external validity check**.
 
 ---
