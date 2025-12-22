@@ -1,5 +1,16 @@
 ### **Academic/Open-Source Datasets of Real-World Robot Demonstrations**
 
+100
+
+[Datasets – Hugging Face](https://huggingface.co/datasets?search=so100)
+
+[Datasets – Hugging Face](https://huggingface.co/datasets?search=so101)
+
+
+[lerobot/svla_so101_pickplace · Datasets at Hugging Face](https://huggingface.co/datasets/lerobot/svla_so101_pickplace)
+
+
+
 #### 1. **Open X-Embodiment (OXE) Dataset**
 
 - **By:** Google + 33 academic labs (including CMU, Stanford, MIT, Berkeley)
