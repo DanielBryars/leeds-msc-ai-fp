@@ -26,6 +26,7 @@ So we need a mask too
 
 
 Interesting in Pi0.5 there are two different training losses:
-1) loss on the actions predicted.
-2) 
+1) loss on the actions predicted. all the way through
+2) some sort of freezing of the VLM and only train the head.
+
 
