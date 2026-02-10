@@ -10,11 +10,11 @@ The increased interest and investment in AI — global private AI investment exc
 
 ### Combining Foundation Models for Robotics
 
-Combining vision models and language models into a VLM (such as SigLIP (Zhai et al., 2023) and Gemma, see PaliGemma (Beyer et al., 2024)) allows interesting problems to be solved, such as image captioning and visual question answering.
+Combining vision models and language models into a VLM (such as SigLIP (Zhai et al., 2023) and Gemma, see PaliGemma (Beyer et al., 2024)) allows interesting problems to be solved, such as image captioning and visual question answering (Zhou, Liu and Gao, 2024).
 
-Recently there has been interest in combining Vision, Language and "Action Heads" — so-called VLAs (Vision-Language-Action models) — to drive generalised robotic movement. The theory is that the vision model provides the features to recognise objects in the world, the LLM provides a semantic link between those objects and language, and through training with large numbers of robot demonstration episodes we can build a model which generalises over robotic tasks. Essentially: leverage the existing investment and bring the advances in LLMs and vision models into the realm of robots. Notable examples include RT-2 (Brohan et al., 2023), Octo (Team et al., 2024), OpenVLA (Kim et al., 2024), and Pi0 (Black et al., 2024).
+Recently there has been interest in combining Vision, Language and "Action Heads" — so-called VLAs (Vision-Language-Action models) to perform generalised robotic control - introduced by RT-2 (Brohan et al., 2023), with examples such as Octo (Team et al., 2024), OpenVLA (Kim et al., 2024), and Pi0 (Black et al., 2024). The theory is that the vision model provides the features to recognise objects in the world, the LLM provides a semantic link between those objects and language, and through training with large numbers of robot demonstration episodes we can build a model which generalises over robotic tasks. Essentially: leverage the existing investment and bring the advances in LLMs and vision models into the realm of robots. 
 
-### Problem with Current VLAs for Experimentation
+### Problem with Current VLAs for Experimentation under constrained resources
 
 OpenVLA (Kim et al., 2024), Pi0, and Pi0.5 (Physical Intelligence, 2025) are still quite large models for a self-funded individual to experiment with. For example, a Pi0 checkpoint is 13GB and training requires at least 48GB of VRAM. Inference, even on a 32GB RTX 5090, runs at best at 4Hz. Zero-shot performance is weak, so some finetuning is required to get any results. I tried these models and found training time and resource requirements unwieldy.
 
@@ -64,3 +64,6 @@ References (to be tidied up)
 The 2024 AI Index Report (Stanford HAI, 2024) https://hai.stanford.edu/ai-index/2024-ai-index-report
 "PyTorch..." (Paszke et al., 2019) https://arxiv.org/pdf/1912.01703
 "SigLIP" (Zhai et al., 2023) https://arxiv.org/pdf/2303.15343
+"PaliGemma" (Beyer et al., 2024) https://arxiv.org/abs/2407.07726
+Zhou, K., Liu, Z. and Gao, P. (eds.) (2024) Large Vision-Language Models: Pre-training, Prompting, and Applications. Cham: Springer
+OpenVLA (Kim et al., 2024) https://arxiv.org/abs/2406.09246
