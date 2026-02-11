@@ -12,6 +12,7 @@ Outputs:
     cross_references.png   - Static image
 """
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -26,6 +27,7 @@ import matplotlib.patches as mpatches
 # Config
 # ---------------------------------------------------------------------------
 PDF_DIR = Path(__file__).parent
+INDEX_JSON = PDF_DIR / "paper_index.json"
 MAX_PAGES_FOR_REFS = None  # None = all pages; set to e.g. 10 for speed
 ARXIV_ID_RE = re.compile(r"(\d{4}\.\d{4,5})")
 
@@ -105,6 +107,20 @@ def extract_title(text: str, filename: str) -> str:
     return short_label(filename)
 
 
+def load_paper_index() -> dict:
+    """Load paper_index.json if it exists, otherwise return empty dict."""
+    if INDEX_JSON.exists():
+        try:
+            data = json.loads(INDEX_JSON.read_text(encoding="utf-8"))
+            print(f"Loaded paper index with {len(data)} entries.")
+            return data
+        except Exception as e:
+            print(f"  [WARN] Could not load paper index: {e}")
+    else:
+        print("  [INFO] No paper_index.json found. Run build_paper_index.py first for better labels.")
+    return {}
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -116,6 +132,9 @@ def main():
 
     print(f"Found {len(pdf_files)} PDFs in {PDF_DIR}\n")
 
+    # Load paper index for rich labels
+    paper_index = load_paper_index()
+
     # -- Phase 1: Extract text and build identity maps ----------------------
     papers = {}  # filename -> {label, arxiv_id, title, text}
     arxiv_to_file = {}  # arxiv_id -> filename
@@ -124,8 +143,15 @@ def main():
         print(f"  Reading {pdf.name}...")
         text = extract_text(pdf)
         arxiv_id = extract_arxiv_id(pdf.name)
-        label = short_label(pdf.name)
-        title = extract_title(text, pdf.name)
+
+        # Use paper index for label and title if available
+        idx_entry = paper_index.get(pdf.name)
+        if idx_entry:
+            label = idx_entry.get("title_short") or short_label(pdf.name)
+            title = idx_entry.get("title") or extract_title(text, pdf.name)
+        else:
+            label = short_label(pdf.name)
+            title = extract_title(text, pdf.name)
 
         papers[pdf.name] = {
             "label": label,
@@ -225,12 +251,18 @@ def main():
         in_deg = G.in_degree(fname)
         out_deg = G.out_degree(fname)
         size = 10 + in_deg * 5  # more-cited papers are bigger
+
+        # Build hover tooltip with Harvard reference if available
+        idx_entry = paper_index.get(fname)
+        harvard = idx_entry.get("harvard_reference", "") if idx_entry else ""
         hover = (
             f"<b>{data['title']}</b><br>"
             f"File: {fname}<br>"
             f"Arxiv: {data['arxiv_id'] or 'N/A'}<br>"
             f"Cited by {in_deg} papers | Cites {out_deg} papers"
         )
+        if harvard:
+            hover += f"<br><br><i>{harvard}</i>"
         net.add_node(
             fname, label=data["label"], title=hover,
             color=data["color"], size=size,
@@ -301,7 +333,10 @@ def main():
     top = sorted(in_degrees.items(), key=lambda x: x[1], reverse=True)[:10]
     for fname, deg in top:
         if deg > 0:
-            print(f"  [{deg} citations] {papers[fname]['label']}")
+            title = papers[fname]['title']
+            label = papers[fname]['label']
+            display = title if len(title) <= 80 else label
+            print(f"  [{deg} citations] {display}")
 
     print("\nDone! Open cross_references.html in a browser for the interactive version.")
 
