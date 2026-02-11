@@ -1,0 +1,1187 @@
+{
+  "1502.03167v3.pdf": {
+    "title": "Batch Normalization: Accelerating Deep Network Training by",
+    "title_short": "Batch Normalization",
+    "authors": [
+      "Reducing Internal Covariate Shift, Sergey Ioffe, Christian Szegedy"
+    ],
+    "year": 2015,
+    "arxiv_id": "1502.03167",
+    "harvard_reference": "Reducing, S.I.C.S. (2015) 'Batch Normalization: Accelerating Deep Network Training by'. arXiv preprint arXiv:1502.03167. Available at: https://arxiv.org/abs/1502.03167.",
+    "extraction_confidence": "medium"
+  },
+  "1706.03762v7.pdf": {
+    "title": "reproduce the tables and figures in this paper solely for use in journalistic or",
+    "title_short": "reproduce the tables and figures in...",
+    "authors": [
+      "Attention Is All You Need"
+    ],
+    "year": 2017,
+    "arxiv_id": "1706.03762",
+    "harvard_reference": "Need, A.I.A.Y. (2017) 'reproduce the tables and figures in this paper solely for use in journalistic or'. arXiv preprint arXiv:1706.03762. Available at: https://arxiv.org/abs/1706.03762.",
+    "extraction_confidence": "medium"
+  },
+  "1812.11118v2.pdf": {
+    "title": "Mikhail Belkina, Daniel Hsub, Siyuan Maa, and Soumik Mandala",
+    "title_short": "Mikhail Belkina, Daniel Hsub, Siyuan...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2018,
+    "arxiv_id": "1812.11118",
+    "harvard_reference": "Unknown (2018) 'Mikhail Belkina, Daniel Hsub, Siyuan Maa, and Soumik Mandala'. arXiv preprint arXiv:1812.11118. Available at: https://arxiv.org/abs/1812.11118.",
+    "extraction_confidence": "medium"
+  },
+  "1909.12200v3.pdf": {
+    "title": "Scaling data-driven robotics with reward sketching and",
+    "title_short": "Scaling data-driven robotics with...",
+    "authors": [
+      "Serkan Cabi Sergio Gómez Colmenarejo Alexander Novikov Ksenia Konyushkova, Scott Reed Rae Jeong Konrad ˙Zołna Yusuf Aytar David Budden Mel Vecerik, Oleg Sushkov David Barker Jonathan Scholz Misha Denil Nando de Freitas Ziyu Wang"
+    ],
+    "year": 2019,
+    "arxiv_id": "1909.12200",
+    "harvard_reference": "Serkan, S.R.R.J.K.˙.Y.A.D.B.M.V.O.S.D.B.J.S.M.D.N.D.F.Z.W. (2019) 'Scaling data-driven robotics with reward sketching and'. arXiv preprint arXiv:1909.12200. Available at: https://arxiv.org/abs/1909.12200.",
+    "extraction_confidence": "medium"
+  },
+  "1912.01703v1.pdf": {
+    "title": "PyTorch: An Imperative Style, High-Performance",
+    "title_short": "PyTorch: An Imperative Style,...",
+    "authors": [
+      "Deep Learning Library, Adam Paszke, Sam Gross"
+    ],
+    "year": 2019,
+    "arxiv_id": "1912.01703",
+    "harvard_reference": "Deep, A.P.S.G. (2019) 'PyTorch: An Imperative Style, High-Performance'. arXiv preprint arXiv:1912.01703. Available at: https://arxiv.org/abs/1912.01703.",
+    "extraction_confidence": "medium"
+  },
+  "2001.08361v1.pdf": {
+    "title": "Scaling Laws for Neural Language Models",
+    "title_short": "Scaling Laws for Neural Language Models",
+    "authors": [
+      "Jared Kaplan"
+    ],
+    "year": 2020,
+    "arxiv_id": "2001.08361",
+    "harvard_reference": "Kaplan, J. (2020) 'Scaling Laws for Neural Language Models'. arXiv preprint arXiv:2001.08361. Available at: https://arxiv.org/abs/2001.08361.",
+    "extraction_confidence": "medium"
+  },
+  "2006.03509v2.pdf": {
+    "title": "Triple descent and the Two Kinds of Overﬁtting:",
+    "title_short": "Triple descent and the Two Kinds of...",
+    "authors": [
+      "Where",
+      "Why do they Appear?, École Normale Supérieure"
+    ],
+    "year": 2020,
+    "arxiv_id": "2006.03509",
+    "harvard_reference": "Where and Why, É.N.S. (2020) 'Triple descent and the Two Kinds of Overﬁtting:'. arXiv preprint arXiv:2006.03509. Available at: https://arxiv.org/abs/2006.03509.",
+    "extraction_confidence": "medium"
+  },
+  "2010.03768v2.pdf": {
+    "title": "ENVIRONMENTS FOR INTERACTIVE LEARNING",
+    "title_short": "ENVIRONMENTS FOR INTERACTIVE LEARNING",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2020,
+    "arxiv_id": "2010.03768",
+    "harvard_reference": "Unknown (2020) 'ENVIRONMENTS FOR INTERACTIVE LEARNING'. arXiv preprint arXiv:2010.03768. Available at: https://arxiv.org/abs/2010.03768.",
+    "extraction_confidence": "medium"
+  },
+  "2201.02177v1.pdf": {
+    "title": "Alethea Power, Yuri Burda, Harri Edwards, Igor Babuschkin",
+    "title_short": "Alethea Power, Yuri Burda, Harri...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2022,
+    "arxiv_id": "2201.02177",
+    "harvard_reference": "Unknown (2022) 'Alethea Power, Yuri Burda, Harri Edwards, Igor Babuschkin'. arXiv preprint arXiv:2201.02177. Available at: https://arxiv.org/abs/2201.02177.",
+    "extraction_confidence": "medium"
+  },
+  "2201.11903v6.pdf": {
+    "title": "Chain-of-Thought Prompting Elicits Reasoning",
+    "title_short": "Chain-of-Thought Prompting Elicits...",
+    "authors": [
+      "in Large Language Models",
+      "Jason Wei",
+      "Xuezhi Wang",
+      "Dale Schuurmans",
+      "Maarten Bosma"
+    ],
+    "year": 2022,
+    "arxiv_id": "2201.11903",
+    "harvard_reference": "Models, I.L.L. et al. (2022) 'Chain-of-Thought Prompting Elicits Reasoning'. arXiv preprint arXiv:2201.11903. Available at: https://arxiv.org/abs/2201.11903.",
+    "extraction_confidence": "medium"
+  },
+  "2202.05924v2.pdf": {
+    "title": "Massachusetts Institute of Technology",
+    "title_short": "Massachusetts Institute of Technology",
+    "authors": [
+      "Marius Hobbhahn, Pablo Villalobos"
+    ],
+    "year": 2022,
+    "arxiv_id": "2202.05924",
+    "harvard_reference": "Marius, P.V. (2022) 'Massachusetts Institute of Technology'. arXiv preprint arXiv:2202.05924. Available at: https://arxiv.org/abs/2202.05924.",
+    "extraction_confidence": "medium"
+  },
+  "2204.01691v2.pdf": {
+    "title": "Grounding Language in Robotic Affordances",
+    "title_short": "Grounding Language in Robotic...",
+    "authors": [
+      "Anonymous Submission"
+    ],
+    "year": 2022,
+    "arxiv_id": "2204.01691",
+    "harvard_reference": "Submission, A. (2022) 'Grounding Language in Robotic Affordances'. arXiv preprint arXiv:2204.01691. Available at: https://arxiv.org/abs/2204.01691.",
+    "extraction_confidence": "medium"
+  },
+  "2204.14198v2.pdf": {
+    "title": "Flamingo: a Visual Language Model",
+    "title_short": "Flamingo",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2022,
+    "arxiv_id": "2204.14198",
+    "harvard_reference": "Unknown (2022) 'Flamingo: a Visual Language Model'. arXiv preprint arXiv:2204.14198. Available at: https://arxiv.org/abs/2204.14198.",
+    "extraction_confidence": "medium"
+  },
+  "2210.00881v1.pdf": {
+    "title": "A tool that could suggest new personalized research directions and ideas by taking insights from",
+    "title_short": "A tool that could suggest new...",
+    "authors": [
+      "Author"
+    ],
+    "year": 2022,
+    "arxiv_id": "2210.00881",
+    "harvard_reference": "Author (2022) 'A tool that could suggest new personalized research directions and ideas by taking insights from'. arXiv preprint arXiv:2210.00881. Available at: https://arxiv.org/abs/2210.00881.",
+    "extraction_confidence": "medium"
+  },
+  "2303.04137v4.pdf": {
+    "title": "Diffusion Policy:",
+    "title_short": "Diffusion Policy",
+    "authors": [
+      "Visuomotor Policy Learning via Action Diffusion, Cheng Chi Siyuan Feng Yilun Du Zhenjia Xu Eric Cousineau Benjamin Burchfiel Shuran Song"
+    ],
+    "year": 2023,
+    "arxiv_id": "2303.04137",
+    "harvard_reference": "Visuomotor, C.C.S.F.Y.D.Z.X.E.C.B.B.S.S. (2023) 'Diffusion Policy:'. arXiv preprint arXiv:2303.04137. Available at: https://arxiv.org/abs/2303.04137.",
+    "extraction_confidence": "high"
+  },
+  "2303.15343v4.pdf": {
+    "title": "Sigmoid Loss for Language Image Pre-Training",
+    "title_short": "Sigmoid Loss for Language Image...",
+    "authors": [
+      "Basil Mustafa, Alexander Kolesnikov"
+    ],
+    "year": 2023,
+    "arxiv_id": "2303.15343",
+    "harvard_reference": "Basil, A.K. (2023) 'Sigmoid Loss for Language Image Pre-Training'. arXiv preprint arXiv:2303.15343. Available at: https://arxiv.org/abs/2303.15343.",
+    "extraction_confidence": "high"
+  },
+  "2304.06372v2.pdf": {
+    "title": "Contact Models in Robotics:",
+    "title_short": "Contact Models in Robotics",
+    "authors": [
+      "a Comparative Analysis, Quentin Le Lidec Wilson Jallet Louis Montaut Ivan Laptev Cordelia Schmid",
+      "Justin Carpentier"
+    ],
+    "year": 2023,
+    "arxiv_id": "2304.06372",
+    "harvard_reference": "a, Q.L.L.W.J.L.M.I.L.C.S. and Carpentier, J. (2023) 'Contact Models in Robotics:'. arXiv preprint arXiv:2304.06372. Available at: https://arxiv.org/abs/2304.06372.",
+    "extraction_confidence": "medium"
+  },
+  "2304.13705v1 (1).pdf": {
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "title_short": "Learning Fine-Grained Bimanual...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2023,
+    "arxiv_id": "2304.13705",
+    "harvard_reference": "Unknown (2023) 'Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware'. arXiv preprint arXiv:2304.13705. Available at: https://arxiv.org/abs/2304.13705.",
+    "extraction_confidence": "medium"
+  },
+  "2304.13705v1.pdf": {
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "title_short": "Learning Fine-Grained Bimanual...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2023,
+    "arxiv_id": "2304.13705",
+    "harvard_reference": "Unknown (2023) 'Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware'. arXiv preprint arXiv:2304.13705. Available at: https://arxiv.org/abs/2304.13705.",
+    "extraction_confidence": "medium"
+  },
+  "2307.15818v1.pdf": {
+    "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+    "title_short": "RT-2: Vision-Language-Action Models...",
+    "authors": [
+      "RT- : Vision-Language-Action Models Transfer",
+      "Web Knowledge to Robotic Control",
+      "Anthony Brohan Noah Brown Justice Carbajal Yevgen Chebotar Xi Chen Krzysztof Choromanski",
+      "Tianli Ding Danny Driess Avinava Dubey Chelsea Finn Pete Florence Chuyuan Fu"
+    ],
+    "year": 2023,
+    "arxiv_id": "2307.15818",
+    "harvard_reference": "Transfer, R.:.V.M. et al. (2023) 'RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control'. arXiv preprint arXiv:2307.15818. Available at: https://arxiv.org/abs/2307.15818.",
+    "extraction_confidence": "high"
+  },
+  "2401.16013v4.pdf": {
+    "title": "SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning",
+    "title_short": "SERL: A Software Suite for...",
+    "authors": [
+      "SERL: A Software Suite for Sample-Efficient",
+      "Robotic Reinforcement Learning",
+      "Jianlan Luo * Zheyuan Hu * Charles Xu You Liang Tan Jacob Berg Archit Sharma Stefan Schaal Chelsea Finn",
+      "Abhishek Gupta",
+      "Sergey Levine"
+    ],
+    "year": 2024,
+    "arxiv_id": "2401.16013",
+    "harvard_reference": "Sample-Efficient, S.A.S.S.F. et al. (2024) 'SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning'. arXiv preprint arXiv:2401.16013. Available at: https://arxiv.org/abs/2401.16013.",
+    "extraction_confidence": "high"
+  },
+  "2405.12213v2.pdf": {
+    "title": "Octo: An Open-Source Generalist Robot Policy",
+    "title_short": "Octo: An Open-Source Generalist Robot...",
+    "authors": [
+      "Octo Model Team"
+    ],
+    "year": 2024,
+    "arxiv_id": "2405.12213",
+    "harvard_reference": "Team, O.M. (2024) 'Octo: An Open-Source Generalist Robot Policy'. arXiv preprint arXiv:2405.12213. Available at: https://arxiv.org/abs/2405.12213.",
+    "extraction_confidence": "high"
+  },
+  "2405.12755v2.pdf": {
+    "title": "HiLD 2024: 2nd Workshop on High-dimensional Learning Dynamics",
+    "title_short": "HiLD 2024",
+    "authors": [
+      "Progress Measures for Grokking on Real-world Tasks, Satvik Golechha"
+    ],
+    "year": 2024,
+    "arxiv_id": "2405.12755",
+    "harvard_reference": "Progress, S.G. (2024) 'HiLD 2024: 2nd Workshop on High-dimensional Learning Dynamics'. arXiv preprint arXiv:2405.12755. Available at: https://arxiv.org/abs/2405.12755.",
+    "extraction_confidence": "medium"
+  },
+  "2408.11039v1.pdf": {
+    "title": "δ Waymo σ University of Southern California",
+    "title_short": "δ Waymo σ University of Southern...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2024,
+    "arxiv_id": "2408.11039",
+    "harvard_reference": "Unknown (2024) 'δ Waymo σ University of Southern California'. arXiv preprint arXiv:2408.11039. Available at: https://arxiv.org/abs/2408.11039.",
+    "extraction_confidence": "medium"
+  },
+  "2409.12514v5.pdf": {
+    "title": "IEEE ROBOTICS AND AUTOMATION LETTERS. PREPRINT VERSION. ACCEPTED FEB 2025",
+    "title_short": "IEEE ROBOTICS AND AUTOMATION LETTERS....",
+    "authors": [
+      "Models for Robotic Manipulation, Junjie Wen Yichen Zhu Member IEEE Jinming Li Minjie Zhu Zhibin Tang Kun Wu Zhiyuan Xu, Ning Liu Ran Cheng Chaomin Shen Yaxin Peng Feifei Feng",
+      "Jian Tang Fellow IEEE"
+    ],
+    "year": 2024,
+    "arxiv_id": "2409.12514",
+    "harvard_reference": "Models, J.W.Y.Z.M.I.J.L.M.Z.Z.T.K.W.Z.X.N.L.R.C.C.S.Y.P.F.F. and IEEE, J.T.F. (2024) 'IEEE ROBOTICS AND AUTOMATION LETTERS. PREPRINT VERSION. ACCEPTED FEB 2025'. arXiv preprint arXiv:2409.12514. Available at: https://arxiv.org/abs/2409.12514.",
+    "extraction_confidence": "medium"
+  },
+  "2410.02745v3.pdf": {
+    "title": "AVG-LLaVA: An Efficient Large Multimodal Model with Adaptive Visual Granularity",
+    "title_short": "AVG-LLaVA",
+    "authors": [
+      "Zhibin Lan",
+      "Liqiang Niu",
+      "Fandong Meng",
+      "Wenbo Li",
+      "Jie Zhou",
+      "Jinsong Su"
+    ],
+    "year": 2024,
+    "arxiv_id": "2410.02745",
+    "harvard_reference": "Lan, Z. et al. (2024) 'AVG-LLaVA: An Efficient Large Multimodal Model with Adaptive Visual Granularity'. arXiv preprint arXiv:2410.02745. Available at: https://arxiv.org/abs/2410.02745.",
+    "extraction_confidence": "high"
+  },
+  "2412.04453v2.pdf": {
+    "title": "NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
+    "title_short": "NaVILA: Legged Robot Vision-Language-Act...",
+    "authors": [
+      "Model for Navigation"
+    ],
+    "year": 2024,
+    "arxiv_id": "2412.04453",
+    "harvard_reference": "Navigation, M.F. (2024) 'NaVILA: Legged Robot Vision-Language-Action Model for Navigation'. arXiv preprint arXiv:2412.04453. Available at: https://arxiv.org/abs/2412.04453.",
+    "extraction_confidence": "high"
+  },
+  "2501.12948v2.pdf": {
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "title_short": "DeepSeek-R1",
+    "authors": [
+      "DeepSeek-AI",
+      "Daya Guo",
+      "Dejian Yang",
+      "Haowei Zhang",
+      "Junxiao Song",
+      "Peiyi Wang",
+      "Qihao Zhu",
+      "Runxin Xu",
+      "Ruoyu Zhang",
+      "Shirong Ma",
+      "Xiao Bi",
+      "Xiaokang Zhang",
+      "Xingkai Yu",
+      "Yu Wu",
+      "Z. F. Wu",
+      "Zhibin Gou",
+      "Zhihong Shao",
+      "Zhuoshu Li",
+      "Ziyi Gao",
+      "Aixin Liu",
+      "Bing Xue",
+      "Bingxuan Wang",
+      "Bochao Wu",
+      "Bei Feng",
+      "Chengda Lu",
+      "Chenggang Zhao",
+      "Chengqi Deng",
+      "Chenyu Zhang",
+      "Chong Ruan",
+      "Damai Dai",
+      "Deli Chen",
+      "Dongjie Ji",
+      "Erhang Li",
+      "Fangyun Lin",
+      "Fucong Dai",
+      "Fuli Luo",
+      "Guangbo Hao",
+      "Guanting Chen",
+      "Guowei Li",
+      "H. Zhang",
+      "Han Bao",
+      "Hanwei Xu",
+      "Haocheng Wang",
+      "Honghui Ding",
+      "Huajian Xin",
+      "Huazuo Gao",
+      "Hui Qu",
+      "Hui Li",
+      "Jianzhong Guo",
+      "Jiashi Li",
+      "Jiawei Wang",
+      "Jingchang Chen",
+      "Jingyang Yuan",
+      "Junjie Qiu",
+      "Junlong Li",
+      "J. L. Cai",
+      "Jiaqi Ni",
+      "Jian Liang",
+      "Jin Chen",
+      "Kai Dong",
+      "Kai Hu",
+      "Kaige Gao",
+      "Kang Guan",
+      "Kexin Huang",
+      "Kuai Yu",
+      "Lean Wang",
+      "Lecong Zhang",
+      "Liang Zhao",
+      "Litong Wang",
+      "Liyue Zhang",
+      "Lei Xu",
+      "Leyi Xia",
+      "Mingchuan Zhang",
+      "Minghua Zhang",
+      "Minghui Tang",
+      "Meng Li",
+      "Miaojun Wang",
+      "Mingming Li",
+      "Ning Tian",
+      "Panpan Huang",
+      "Peng Zhang",
+      "Qiancheng Wang",
+      "Qinyu Chen",
+      "Qiushi Du",
+      "Ruiqi Ge",
+      "Ruisong Zhang",
+      "Ruizhe Pan",
+      "Runji Wang",
+      "R. J. Chen",
+      "R. L. Jin",
+      "Ruyi Chen",
+      "Shanghao Lu",
+      "Shangyan Zhou",
+      "Shanhuang Chen",
+      "Shengfeng Ye",
+      "Shiyu Wang",
+      "Shuiping Yu",
+      "Shunfeng Zhou",
+      "Shuting Pan",
+      "S. S. Li",
+      "Shuang Zhou",
+      "Shaoqing Wu",
+      "Shengfeng Ye",
+      "Tao Yun",
+      "Tian Pei",
+      "Tianyu Sun",
+      "T. Wang",
+      "Wangding Zeng",
+      "Wanjia Zhao",
+      "Wen Liu",
+      "Wenfeng Liang",
+      "Wenjun Gao",
+      "Wenqin Yu",
+      "Wentao Zhang",
+      "W. L. Xiao",
+      "Wei An",
+      "Xiaodong Liu",
+      "Xiaohan Wang",
+      "Xiaokang Chen",
+      "Xiaotao Nie",
+      "Xin Cheng",
+      "Xin Liu",
+      "Xin Xie",
+      "Xingchao Liu",
+      "Xinyu Yang",
+      "Xinyuan Li",
+      "Xuecheng Su",
+      "Xuheng Lin",
+      "X. Q. Li",
+      "Xiangyue Jin",
+      "Xiaojin Shen",
+      "Xiaosha Chen",
+      "Xiaowen Sun",
+      "Xiaoxiang Wang",
+      "Xinnan Song",
+      "Xinyi Zhou",
+      "Xianzu Wang",
+      "Xinxia Shan",
+      "Y. K. Li",
+      "Y. Q. Wang",
+      "Y. X. Wei",
+      "Yang Zhang",
+      "Yanhong Xu",
+      "Yao Li",
+      "Yao Zhao",
+      "Yaofeng Sun",
+      "Yaohui Wang",
+      "Yi Yu",
+      "Yichao Zhang",
+      "Yifan Shi",
+      "Yiliang Xiong",
+      "Ying He",
+      "Yishi Piao",
+      "Yisong Wang",
+      "Yixuan Tan",
+      "Yiyang Ma",
+      "Yiyuan Liu",
+      "Yongqiang Guo",
+      "Yuan Ou",
+      "Yuduan Wang",
+      "Yue Gong",
+      "Yuheng Zou",
+      "Yujia He",
+      "Yunfan Xiong",
+      "Yuxiang Luo",
+      "Yuxiang You",
+      "Yuxuan Liu",
+      "Yuyang Zhou",
+      "Y. X. Zhu",
+      "Yanhong Xu",
+      "Yanping Huang",
+      "Yaohui Li",
+      "Yi Zheng",
+      "Yuchen Zhu",
+      "Yunxian Ma",
+      "Ying Tang",
+      "Yukun Zha",
+      "Yuting Yan",
+      "Z. Z. Ren",
+      "Zehui Ren",
+      "Zhangli Sha",
+      "Zhe Fu",
+      "Zhean Xu",
+      "Zhenda Xie",
+      "Zhengyan Zhang",
+      "Zhewen Hao",
+      "Zhicheng Ma",
+      "Zhigang Yan",
+      "Zhiyu Wu",
+      "Zihui Gu",
+      "Zijia Zhu",
+      "Zijun Liu",
+      "Zilin Li",
+      "Ziwei Xie",
+      "Ziyang Song",
+      "Zizheng Pan",
+      "Zhen Huang",
+      "Zhipeng Xu",
+      "Zhongyu Zhang",
+      "Zhen Zhang"
+    ],
+    "year": 2025,
+    "arxiv_id": "2501.12948",
+    "harvard_reference": "DeepSeek-AI et al. (2025) 'DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning'. arXiv preprint arXiv:2501.12948. Available at: https://arxiv.org/abs/2501.12948.",
+    "extraction_confidence": "high"
+  },
+  "2502.05855v3.pdf": {
+    "title": "DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control",
+    "title_short": "DexVLA: Vision-Language Model with...",
+    "authors": [
+      "Junjie Wen",
+      "Yichen Zhu",
+      "Jinming Li",
+      "Zhibin Tang",
+      "Chaomin Shen",
+      "Feifei Feng"
+    ],
+    "year": 2025,
+    "arxiv_id": "2502.05855",
+    "harvard_reference": "Wen, J. et al. (2025) 'DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control'. arXiv preprint arXiv:2502.05855. Available at: https://arxiv.org/abs/2502.05855.",
+    "extraction_confidence": "high"
+  },
+  "2502.19417v2.pdf": {
+    "title": "Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models",
+    "title_short": "Hi Robot",
+    "authors": [
+      "Lucy Xiaoyang Shi",
+      "Brian Ichter",
+      "Michael Equi",
+      "Liyiming Ke",
+      "Karl Pertsch",
+      "Quan Vuong",
+      "James Tanner",
+      "Anna Walling",
+      "Haohuan Wang",
+      "Niccolo Fusai",
+      "Adrian Li-Bell",
+      "Danny Driess",
+      "Lachy Groom",
+      "Sergey Levine",
+      "Chelsea Finn"
+    ],
+    "year": 2025,
+    "arxiv_id": "2502.19417",
+    "harvard_reference": "Shi, L.X. et al. (2025) 'Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models'. arXiv preprint arXiv:2502.19417. Available at: https://arxiv.org/abs/2502.19417.",
+    "extraction_confidence": "high"
+  },
+  "2502.19645v2.pdf": {
+    "title": "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+    "title_short": "Fine-Tuning Vision-Language-Action...",
+    "authors": [
+      "Optimizing Speed",
+      "Success, Moo Jin Kim"
+    ],
+    "year": 2025,
+    "arxiv_id": "2502.19645",
+    "harvard_reference": "Speed, O. and Success, M.J.K. (2025) 'Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success'. arXiv preprint arXiv:2502.19645. Available at: https://arxiv.org/abs/2502.19645.",
+    "extraction_confidence": "high"
+  },
+  "2503.05833v2.pdf": {
+    "title": "Refined Policy Distillation: From VLA Generalists to RL Experts",
+    "title_short": "Refined Policy Distillation",
+    "authors": [
+      "Tobias Jülg",
+      "Wolfram Burgard",
+      "Florian Walter"
+    ],
+    "year": 2025,
+    "arxiv_id": "2503.05833",
+    "harvard_reference": "Jülg, T. et al. (2025) 'Refined Policy Distillation: From VLA Generalists to RL Experts'. arXiv preprint arXiv:2503.05833. Available at: https://arxiv.org/abs/2503.05833.",
+    "extraction_confidence": "high"
+  },
+  "2503.22020v1.pdf": {
+    "title": "CoT-VLA: Visual Chain-of-Thought Reasoning for",
+    "title_short": "CoT-VLA: Visual Chain-of-Thought...",
+    "authors": [
+      "Moo Jin Kim"
+    ],
+    "year": 2025,
+    "arxiv_id": "2503.22020",
+    "harvard_reference": "Kim, M.J. (2025) 'CoT-VLA: Visual Chain-of-Thought Reasoning for'. arXiv preprint arXiv:2503.22020. Available at: https://arxiv.org/abs/2503.22020.",
+    "extraction_confidence": "medium"
+  },
+  "2506.01844v1.pdf": {
+    "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+    "title_short": "SmolVLA: A Vision-Language-Action Model...",
+    "authors": [
+      "Mustafa Shukor",
+      "Dana Aubakirova",
+      "Francesco Capuano",
+      "Pepijn Kooijmans",
+      "Steven Palma",
+      "Adil Zouitine",
+      "Michel Aractingi",
+      "Caroline Pascal",
+      "Martino Russi",
+      "Andres Marafioti",
+      "Simon Alibert",
+      "Matthieu Cord",
+      "Thomas Wolf",
+      "Remi Cadene"
+    ],
+    "year": 2025,
+    "arxiv_id": "2506.01844",
+    "harvard_reference": "Shukor, M. et al. (2025) 'SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics'. arXiv preprint arXiv:2506.01844. Available at: https://arxiv.org/abs/2506.01844.",
+    "extraction_confidence": "high"
+  },
+  "2507.07969v3.pdf": {
+    "title": "Reinforcement Learning with Action Chunking",
+    "title_short": "Reinforcement Learning with Action...",
+    "authors": [
+      "Qiyang Li",
+      "Zhiyuan Zhou",
+      "Sergey Levine"
+    ],
+    "year": 2025,
+    "arxiv_id": "2507.07969",
+    "harvard_reference": "Li, Q. et al. (2025) 'Reinforcement Learning with Action Chunking'. arXiv preprint arXiv:2507.07969. Available at: https://arxiv.org/abs/2507.07969.",
+    "extraction_confidence": "high"
+  },
+  "2510.12403v1.pdf": {
+    "title": "Robot Learning: A Tutorial",
+    "title_short": "Robot Learning",
+    "authors": [
+      "Francesco Capuano",
+      "Caroline Pascal",
+      "Adil Zouitine",
+      "Thomas Wolf",
+      "Michel Aractingi"
+    ],
+    "year": 2025,
+    "arxiv_id": "2510.12403",
+    "harvard_reference": "Capuano, F. et al. (2025) 'Robot Learning: A Tutorial'. arXiv preprint arXiv:2510.12403. Available at: https://arxiv.org/abs/2510.12403.",
+    "extraction_confidence": "high"
+  },
+  "2511.00091v1.pdf": {
+    "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+    "title_short": "Self-Improving Vision-Language-Action...",
+    "authors": [
+      "Wenli Xiao",
+      "Haotian Lin",
+      "Andy Peng",
+      "Haoru Xue",
+      "Tairan He",
+      "Yuqi Xie",
+      "Fengyuan Hu",
+      "Jimmy Wu",
+      "Zhengyi Luo",
+      "Linxi \"Jim\" Fan",
+      "Guanya Shi",
+      "Yuke Zhu"
+    ],
+    "year": 2025,
+    "arxiv_id": "2511.00091",
+    "harvard_reference": "Xiao, W. et al. (2025) 'Self-Improving Vision-Language-Action Models with Data Generation via Residual RL'. arXiv preprint arXiv:2511.00091. Available at: https://arxiv.org/abs/2511.00091.",
+    "extraction_confidence": "high"
+  },
+  "2511.14759v2.pdf": {
+    "title": "$\\pi^{*}_{0.6}$: a VLA That Learns From Experience",
+    "title_short": "$\\pi^{*}_{0.6}$",
+    "authors": [
+      "Physical Intelligence",
+      "Ali Amin",
+      "Raichelle Aniceto",
+      "Ashwin Balakrishna",
+      "Kevin Black",
+      "Ken Conley",
+      "Grace Connors",
+      "James Darpinian",
+      "Karan Dhabalia",
+      "Jared DiCarlo",
+      "Danny Driess",
+      "Michael Equi",
+      "Adnan Esmail",
+      "Yunhao Fang",
+      "Chelsea Finn",
+      "Catherine Glossop",
+      "Thomas Godden",
+      "Ivan Goryachev",
+      "Lachy Groom",
+      "Hunter Hancock",
+      "Karol Hausman",
+      "Gashon Hussein",
+      "Brian Ichter",
+      "Szymon Jakubczak",
+      "Rowan Jen",
+      "Tim Jones",
+      "Ben Katz",
+      "Liyiming Ke",
+      "Chandra Kuchi",
+      "Marinda Lamb",
+      "Devin LeBlanc",
+      "Sergey Levine",
+      "Adrian Li-Bell",
+      "Yao Lu",
+      "Vishnu Mano",
+      "Mohith Mothukuri",
+      "Suraj Nair",
+      "Karl Pertsch",
+      "Allen Z. Ren",
+      "Charvi Sharma",
+      "Lucy Xiaoyang Shi",
+      "Laura Smith",
+      "Jost Tobias Springenberg",
+      "Kyle Stachowicz",
+      "Will Stoeckle",
+      "Alex Swerdlow",
+      "James Tanner",
+      "Marcel Torne",
+      "Quan Vuong",
+      "Anna Walling",
+      "Haohuan Wang",
+      "Blake Williams",
+      "Sukwon Yoo",
+      "Lili Yu",
+      "Ury Zhilinsky",
+      "Zhiyuan Zhou"
+    ],
+    "year": 2025,
+    "arxiv_id": "2511.14759",
+    "harvard_reference": "Intelligence, P. et al. (2025) '$\\pi^{*}_{0.6}$: a VLA That Learns From Experience'. arXiv preprint arXiv:2511.14759. Available at: https://arxiv.org/abs/2511.14759.",
+    "extraction_confidence": "high"
+  },
+  "2512.06951v1.pdf": {
+    "title": "Task adaptation of Vision-Language-Action model: 1st Place Solution for the 2025 BEHAVIOR Challenge",
+    "title_short": "Task adaptation of Vision-Language-Actio...",
+    "authors": [
+      "Ilia Larchenko",
+      "Gleb Zarin",
+      "Akash Karnatak"
+    ],
+    "year": 2025,
+    "arxiv_id": "2512.06951",
+    "harvard_reference": "Larchenko, I. et al. (2025) 'Task adaptation of Vision-Language-Action model: 1st Place Solution for the 2025 BEHAVIOR Challenge'. arXiv preprint arXiv:2512.06951. Available at: https://arxiv.org/abs/2512.06951.",
+    "extraction_confidence": "high"
+  },
+  "2512.15692v2.pdf": {
+    "title": "mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs",
+    "title_short": "mimic-video",
+    "authors": [
+      "Jonas Pai",
+      "Liam Achenbach",
+      "Victoriano Montesinos",
+      "Benedek Forrai",
+      "Oier Mees",
+      "Elvis Nava"
+    ],
+    "year": 2025,
+    "arxiv_id": "2512.15692",
+    "harvard_reference": "Pai, J. et al. (2025) 'mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs'. arXiv preprint arXiv:2512.15692. Available at: https://arxiv.org/abs/2512.15692.",
+    "extraction_confidence": "high"
+  },
+  "2601.14514v1.pdf": {
+    "title": "\"Just in Time\" World Modeling Supports Human Planning and Reasoning",
+    "title_short": "\"Just in Time\" World Modeling Supports...",
+    "authors": [
+      "Tony Chen",
+      "Sam Cheyette",
+      "Kelsey Allen",
+      "Joshua Tenenbaum",
+      "Kevin Smith"
+    ],
+    "year": 2026,
+    "arxiv_id": "2601.14514",
+    "harvard_reference": "Chen, T. et al. (2026) '\"Just in Time\" World Modeling Supports Human Planning and Reasoning'. arXiv preprint arXiv:2601.14514. Available at: https://arxiv.org/abs/2601.14514.",
+    "extraction_confidence": "high"
+  },
+  "65_Opinion_Small_VLAs_Self_Lea.pdf": {
+    "title": "Opinion: Small VLAs Self-Learn Consistency",
+    "title_short": "Opinion: Small VLAs Self-Learn...",
+    "authors": [
+      "Francesco Capuano",
+      "Oxford United Kingdom",
+      "Adil Zouitine",
+      "Hugging Face"
+    ],
+    "year": 2025,
+    "arxiv_id": null,
+    "harvard_reference": "Capuano, F. et al. (2025) 'Opinion: Small VLAs Self-Learn Consistency'.",
+    "extraction_confidence": "high"
+  },
+  "Actions_as_Language_2509.22195.pdf": {
+    "title": "Actions as Language: Fine-Tuning VLMs into VLAs Without Catastrophic Forgetting",
+    "title_short": "Actions as Language",
+    "authors": [
+      "Asher J. Hancock",
+      "Xindi Wu",
+      "Lihan Zha",
+      "Olga Russakovsky",
+      "Anirudha Majumdar"
+    ],
+    "year": 2025,
+    "arxiv_id": "2509.22195",
+    "harvard_reference": "Hancock, A.J. et al. (2025) 'Actions as Language: Fine-Tuning VLMs into VLAs Without Catastrophic Forgetting'. arXiv preprint arXiv:2509.22195. Available at: https://arxiv.org/abs/2509.22195.",
+    "extraction_confidence": "high"
+  },
+  "Advanced_Teleoperation_and_Robot_Learning_Book.pdf": {
+    "title": "Advanced Teleoperation and Robot Learning for Dexterous Manipulation",
+    "title_short": "Advanced Teleoperation and Robot...",
+    "authors": [
+      "Chenguang Yang",
+      "Zhenyu Lu",
+      "Ning Wang"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Yang, C. et al. (n.d.) 'Advanced Teleoperation and Robot Learning for Dexterous Manipulation'.",
+    "extraction_confidence": "medium"
+  },
+  "Align_Then_stEer_2509.02055.pdf": {
+    "title": "Align-Then-stEer: Adapting the Vision-Language Action Models through Unified Latent Guidance",
+    "title_short": "Align-Then-stEer",
+    "authors": [
+      "Yang Zhang",
+      "Chenwei Wang",
+      "Ouyang Lu",
+      "Yuan Zhao",
+      "Yunfei Ge",
+      "Zhenglong Sun",
+      "Xiu Li",
+      "Chi Zhang",
+      "Chenjia Bai",
+      "Xuelong Li"
+    ],
+    "year": 2025,
+    "arxiv_id": "2509.02055",
+    "harvard_reference": "Zhang, Y. et al. (2025) 'Align-Then-stEer: Adapting the Vision-Language Action Models through Unified Latent Guidance'. arXiv preprint arXiv:2509.02055. Available at: https://arxiv.org/abs/2509.02055.",
+    "extraction_confidence": "high"
+  },
+  "Bisphop isbn-9780198538493-book-part-6.pdf": {
+    "title": "Neural Networks for Pattern Recognition, Christopher M. Bishop, Oxford University Press. © Oxford University Press 1995. DOI:",
+    "title_short": "Neural Networks for Pattern...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Unknown (n.d.) 'Neural Networks for Pattern Recognition, Christopher M. Bishop, Oxford University Press. © Oxford University Press 1995. DOI:'.",
+    "extraction_confidence": "medium"
+  },
+  "ConRFT_Robotics_Proceedings.pdf": {
+    "title": "ConRFT Robotics Proceedings",
+    "title_short": "ConRFT Robotics Proceedings",
+    "authors": [
+      "Unknown"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Unknown (n.d.) 'ConRFT Robotics Proceedings'.",
+    "extraction_confidence": "low"
+  },
+  "DIAL_Xiao_2023.pdf": {
+    "title": "Robotic Skill Acquisition via Instruction Augmentation with Vision-Language Models",
+    "title_short": "Robotic Skill Acquisition via...",
+    "authors": [
+      "Augmentation with Vision-Language Models"
+    ],
+    "year": 2023,
+    "arxiv_id": null,
+    "harvard_reference": "Models, A.W.V. (2023) 'Robotic Skill Acquisition via Instruction Augmentation with Vision-Language Models'.",
+    "extraction_confidence": "high"
+  },
+  "electronics-14-03074 Hierarchical Learning for Closed-Loop Robotic Manipulation in Cluttered Scenes via Depth Vision, Reinforcement Learning, and Behaviour Cloning.pdf": {
+    "title": "Hierarchical Learning for Closed-Loop Robotic Manipulation in Cluttered Scenes via Depth Vision, Reinforcement Learning, and Behaviour Cloning",
+    "title_short": "Hierarchical Learning for Closed-Loop...",
+    "authors": [
+      "Hoi Fai Yu, Abdulrahman Altahhan"
+    ],
+    "year": 2025,
+    "arxiv_id": null,
+    "harvard_reference": "Hoi, A.A. (2025) 'Hierarchical Learning for Closed-Loop Robotic Manipulation in Cluttered Scenes via Depth Vision, Reinforcement Learning, and Behaviour Cloning'.",
+    "extraction_confidence": "high"
+  },
+  "Enhancing_Generalization_2509.11417.pdf": {
+    "title": "Enhancing Generalization in Vision-Language-Action Models by Preserving Pretrained Representations",
+    "title_short": "Enhancing Generalization in...",
+    "authors": [
+      "Shresth Grover",
+      "Akshay Gopalkrishnan",
+      "Bo Ai",
+      "Henrik I. Christensen",
+      "Hao Su",
+      "Xuanlin Li"
+    ],
+    "year": 2025,
+    "arxiv_id": "2509.11417",
+    "harvard_reference": "Grover, S. et al. (2025) 'Enhancing Generalization in Vision-Language-Action Models by Preserving Pretrained Representations'. arXiv preprint arXiv:2509.11417. Available at: https://arxiv.org/abs/2509.11417.",
+    "extraction_confidence": "high"
+  },
+  "Failure_analysis_of_FMEA.pdf": {
+    "title": "Failure analysis of FMEA",
+    "title_short": "Failure analysis of FMEA",
+    "authors": [
+      "Zigmund Bluvband ALD Ltd., Pavel Grabov ALD Ltd., Key Words: CAPA Effectiveness evaluation Failure Mode",
+      "Effect Analysis Ranking procedure., SUMMARY",
+      "CONCLUSIONS, Failure Mode",
+      "Effect Analysis (FMEA) is a proactive"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Zigmund, P.G.A.L.K.W.C.E.E.F.M. et al. (n.d.) 'Failure analysis of FMEA'.",
+    "extraction_confidence": "medium"
+  },
+  "Fine_Tuning_VLA_Kim_2025.pdf": {
+    "title": "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+    "title_short": "Fine-Tuning Vision-Language-Action...",
+    "authors": [
+      "Optimizing Speed",
+      "Success, Moo Jin Kim"
+    ],
+    "year": 2025,
+    "arxiv_id": null,
+    "harvard_reference": "Speed, O. and Success, M.J.K. (2025) 'Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success'.",
+    "extraction_confidence": "high"
+  },
+  "hil-serl-paper.pdf": {
+    "title": "Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+    "title_short": "Precise and Dexterous Robotic...",
+    "authors": [
+      "Precise",
+      "Dexterous Robotic Manipulation via, Human-in-the-Loop Reinforcement Learning, Jianlan Luo Charles Xu Jeffrey Wu",
+      "Sergey Levine"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Precise et al. (n.d.) 'Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning'.",
+    "extraction_confidence": "medium"
+  },
+  "InstructVLA_OpenReview.pdf": {
+    "title": "V -L -A I T : F U M",
+    "title_short": "V -L -A I T",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2026,
+    "arxiv_id": null,
+    "harvard_reference": "Unknown (2026) 'V -L -A I T : F U M'. In: ICLR.",
+    "extraction_confidence": "medium"
+  },
+  "kalashnikov18a scalable deep reinforcement learning for vision based robotic manipulation.pdf": {
+    "title": "Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
+    "title_short": "Scalable Deep Reinforcement Learning...",
+    "authors": [
+      "Anonymous Submission"
+    ],
+    "year": 2018,
+    "arxiv_id": null,
+    "harvard_reference": "Submission, A. (2018) 'Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation'.",
+    "extraction_confidence": "high"
+  },
+  "Learning Hand-Eye Coordination for Robotic Grasping with Large-Scale data collection.pdf": {
+    "title": "Learning Hand-Eye Coordination for Robotic Grasping with Large-Scale Data Collection",
+    "title_short": "Learning Hand-Eye Coordination for...",
+    "authors": [
+      "Grasping with Large-Scale Data Collection, Sergey Levine Peter Pastor Alex Krizhevsky",
+      "Deirdre Quillen"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Grasping, S.L.P.P.A.K. and Quillen, D. (n.d.) 'Learning Hand-Eye Coordination for Robotic Grasping with Large-Scale Data Collection'.",
+    "extraction_confidence": "medium"
+  },
+  "LLaRA_2406.20095.pdf": {
+    "title": "LLARA: SUPERCHARGING ROBOT LEARNING DATA",
+    "title_short": "LLARA: SUPERCHARGING ROBOT LEARNING DATA",
+    "authors": [
+      "FOR VISION-LANGUAGE POLICY"
+    ],
+    "year": 2024,
+    "arxiv_id": "2406.20095",
+    "harvard_reference": "POLICY, F.V. (2024) 'LLARA: SUPERCHARGING ROBOT LEARNING DATA'. arXiv preprint arXiv:2406.20095. Available at: https://arxiv.org/abs/2406.20095.",
+    "extraction_confidence": "medium"
+  },
+  "LLM-Trainer_Zeng_2024.pdf": {
+    "title": "LLM Trainer: Automated Robotic Data Generating via Demonstration Augmentation using LLMs",
+    "title_short": "LLM Trainer",
+    "authors": [
+      "Abraham George",
+      "Amir Barati Farimani"
+    ],
+    "year": 2024,
+    "arxiv_id": null,
+    "harvard_reference": "George, A. and Farimani, A.B. (2024) 'LLM Trainer: Automated Robotic Data Generating via Demonstration Augmentation using LLMs'.",
+    "extraction_confidence": "high"
+  },
+  "LLM_Data_Annotation_Tan_EMNLP_2024.pdf": {
+    "title": "Large Language Models for Data Annotation and Synthesis: A Survey",
+    "title_short": "Large Language Models for Data...",
+    "authors": [
+      "Zhen Tan♠ Dawei Li♠ Song Wang♣ Alimohammad Beigi♠ Bohan Jiang♠, Amrita Bhattacharjee♠ Mansooreh Karami♠ Jundong Li♣ Lu Cheng♥ Huan Liu♠"
+    ],
+    "year": 2024,
+    "arxiv_id": null,
+    "harvard_reference": "Zhen, A.B.M.K.J.L.L.C.H.L. (2024) 'Large Language Models for Data Annotation and Synthesis: A Survey'. In: EMNLP.",
+    "extraction_confidence": "high"
+  },
+  "LLM_Data_Augmentation_Ding_ACL_2024.pdf": {
+    "title": "1Nanyang Technological University, Singapore 2Princeton University",
+    "title_short": "1Nanyang Technological University,...",
+    "authors": [
+      "Unknown"
+    ],
+    "year": 2024,
+    "arxiv_id": null,
+    "harvard_reference": "Unknown (2024) '1Nanyang Technological University, Singapore 2Princeton University'. In: ACL.",
+    "extraction_confidence": "medium"
+  },
+  "LLM_Robotics_Survey_Wang_2023.pdf": {
+    "title": "Large Language Models for Robotics: A Survey",
+    "title_short": "Large Language Models for Robotics",
+    "authors": [
+      "Fanlong ZengⰠ﻿Wensheng GanⰠ﻿Yongheng WangⰠ整⁡氮"
+    ],
+    "year": 2023,
+    "arxiv_id": null,
+    "harvard_reference": "WangⰠ整⁡氮, F.Z.G. (2023) 'Large Language Models for Robotics: A Survey'.",
+    "extraction_confidence": "high"
+  },
+  "Mixture of experts old paper.pdf": {
+    "title": "Adaptive Mixtures of Local Experts",
+    "title_short": "Adaptive Mixtures of Local Experts",
+    "authors": [
+      "Jacobs",
+      "Jordan",
+      "Nowlan",
+      "Hinton"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Jacobs et al. (n.d.) 'Adaptive Mixtures of Local Experts'.",
+    "extraction_confidence": "medium"
+  },
+  "Online_RL_VLA_2501.16664.pdf": {
+    "title": "Improving Vision-Language-Action Model with",
+    "title_short": "Improving Vision-Language-Action Model...",
+    "authors": [
+      "Online Reinforcement Learning, Yanjiang Guo Jianke Zhang Xiaoyu Chen Xiang Ji Yen-Jen Wang Yucheng Hu Jianyu Chen, Large Models"
+    ],
+    "year": 2025,
+    "arxiv_id": "2501.16664",
+    "harvard_reference": "Online, Y.G.J.Z.X.C.X.J.Y.W.Y.H.J.C.L.M. (2025) 'Improving Vision-Language-Action Model with'. arXiv preprint arXiv:2501.16664. Available at: https://arxiv.org/abs/2501.16664.",
+    "extraction_confidence": "medium"
+  },
+  "pi05_KI_Physical_Intelligence.pdf": {
+    "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better",
+    "title_short": "Knowledge Insulating Vision-Language-Act...",
+    "authors": [
+      "Models: Train Fast Run Fast Generalize Better",
+      "Danny Driess",
+      "Jost Tobias Springenberg",
+      "Brian Ichter",
+      "Lili Yu"
+    ],
+    "year": null,
+    "arxiv_id": null,
+    "harvard_reference": "Better, M.T.F.R.F.G. et al. (n.d.) 'Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better'. In: ACL.",
+    "extraction_confidence": "medium"
+  },
+  "Pi05_Physical_Intelligence_2024.pdf": {
+    "title": "π0.5: a Vision-Language-Action Model with",
+    "title_short": "π0.5: a Vision-Language-Action Model...",
+    "authors": [
+      "Physical Intelligence",
+      "Kevin Black Noah Brown James Darpinian Karan Dhabalia Danny Driess Adnan Esmail Michael Equi",
+      "Chelsea Finn Niccolo Fusai Manuel Y. Galliker Dibya Ghosh Lachy Groom Karol Hausman Brian Ichter",
+      "Szymon Jakubczak Tim Jones Liyiming Ke Devin LeBlanc Sergey Levine Adrian Li-Bell Mohith Mothukuri"
+    ],
+    "year": 2024,
+    "arxiv_id": null,
+    "harvard_reference": "Intelligence, P. et al. (2024) 'π0.5: a Vision-Language-Action Model with'.",
+    "extraction_confidence": "medium"
+  },
+  "pi0_Physical_Intelligence_2025.pdf": {
+    "title": "π0: A Vision-Language-Action Flow Model for",
+    "title_short": "π0: A Vision-Language-Action Flow Model...",
+    "authors": [
+      "General Robot Control",
+      "Physical Intelligence",
+      "Kevin Black Noah Brown Danny Driess Adnan Esmail Michael Equi Chelsea Finn Niccolo Fusai",
+      "Lachy Groom Karol Hausman Brian Ichter Szymon Jakubczak Tim Jones Liyiming Ke Sergey Levine",
+      "Adrian Li-Bell Mohith Mothukuri Suraj Nair Karl Pertsch Lucy Xiaoyang Shi James Tanner Quan Vuong"
+    ],
+    "year": 2025,
+    "arxiv_id": null,
+    "harvard_reference": "Control, G.R. et al. (2025) 'π0: A Vision-Language-Action Flow Model for'. In: ACL.",
+    "extraction_confidence": "medium"
+  },
+  "RoboMamba_NeurIPS_2024.pdf": {
+    "title": "Page not found",
+    "title_short": "Page not found",
+    "authors": [
+      "Main Navigation, ○ Contact NeurIPS"
+    ],
+    "year": 2024,
+    "arxiv_id": null,
+    "harvard_reference": "Main, ○.C.N. (2024) 'Page not found'. In: NeurIPS.",
+    "extraction_confidence": "high"
+  },
+  "TGRPO_2506.08440.pdf": {
+    "title": "TGRPO :Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization",
+    "title_short": "TGRPO :Fine-tuning Vision-Language-Actio...",
+    "authors": [
+      "Zengjue Chen",
+      "Runliang Niu",
+      "He Kong",
+      "Qi Wang",
+      "Qianli Xing",
+      "Zipei Fan"
+    ],
+    "year": 2025,
+    "arxiv_id": "2506.08440",
+    "harvard_reference": "Chen, Z. et al. (2025) 'TGRPO :Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization'. arXiv preprint arXiv:2506.08440. Available at: https://arxiv.org/abs/2506.08440.",
+    "extraction_confidence": "high"
+  },
+  "VLA_Review_2024.pdf": {
+    "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+    "title_short": "Vision-Language-Action Models for...",
+    "authors": [
+      "Kento Kawaharazuka",
+      "Jihoon Oh",
+      "Jun Yamada",
+      "Ingmar Posner",
+      "Yuke Zhu"
+    ],
+    "year": 2024,
+    "arxiv_id": null,
+    "harvard_reference": "Kawaharazuka, K. et al. (2024) 'Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications'.",
+    "extraction_confidence": "high"
+  },
+  "VLA_RFT_2510.00406.pdf": {
+    "title": "VLA-RFT: Vision-Language-Action Reinforcement Fine-tuning with Verified Rewards in World Simulators",
+    "title_short": "VLA-RFT: Vision-Language-Action...",
+    "authors": [
+      "Hengtao Li",
+      "Pengxiang Ding",
+      "Runze Suo",
+      "Yihao Wang",
+      "Zirui Ge",
+      "Dongyuan Zang",
+      "Kexian Yu",
+      "Mingyang Sun",
+      "Hongyin Zhang",
+      "Donglin Wang",
+      "Weihua Su"
+    ],
+    "year": 2025,
+    "arxiv_id": "2510.00406",
+    "harvard_reference": "Li, H. et al. (2025) 'VLA-RFT: Vision-Language-Action Reinforcement Fine-tuning with Verified Rewards in World Simulators'. arXiv preprint arXiv:2510.00406. Available at: https://arxiv.org/abs/2510.00406.",
+    "extraction_confidence": "high"
+  },
+  "VLA_Survey_2510.07077.pdf": {
+    "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+    "title_short": "Vision-Language-Action Models for...",
+    "authors": [
+      "Kento Kawaharazuka",
+      "Jihoon Oh",
+      "Jun Yamada",
+      "Ingmar Posner",
+      "Yuke Zhu"
+    ],
+    "year": 2025,
+    "arxiv_id": "2510.07077",
+    "harvard_reference": "Kawaharazuka, K. et al. (2025) 'Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications'. arXiv preprint arXiv:2510.07077. Available at: https://arxiv.org/abs/2510.07077.",
+    "extraction_confidence": "high"
+  }
+}
