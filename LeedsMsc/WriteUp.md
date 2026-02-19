@@ -22,17 +22,25 @@ Not everything is open source. Datasets are generally proprietary — for exampl
 
 ### Low-Cost Approaches
 
-The paper "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware" (Zhao et al., 2023) provides a way to use Behavioural Cloning (Pomerleau, 1991) to teach a model to perform a task such as tying shoelaces or picking up a block. This model is known as ACT (Action Chunking with Transformers) and is small, cheap to train, and inference is very fast (~200Hz), allowing rapid simulation-based experimentation.
+The paper "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware" (Zhao et al., 2023) provides a way to use Behavioural Cloning (Pomerleau, 1991) to teach a model to perform a task such as tying shoelaces or picking up a block. ACT (Action Chunking with Transformers) learns trajectories, predicting the next n chunks from the current observational state, it handles multi-modal distributions where the expert shows multiple possible paths to the same outcome.  
 
-However, my tests with ACT show that it learns a task very well with just an hour of training, but does not generalise well — it essentially learns a trajectory based on visual feedback. Within the training distribution the policy works well, but after training on a task such as picking up a block, it cannot pick up the block at a different location (see Results).
+ACT is small, cheap to train, and inference is very fast, allowing rapid simulation-based experimentation.
+
+My tests with ACT show that it learns a task very well with just an hour of training, but does not generalise to different positions — it essentially learns a trajectory based on visual feedback. Within the training distribution the policy works well, but after training on a task such as picking up a block, it cannot pick up the block at a different location (see Results).
+
+ACT does have a way to differentiate between different tasks.
+
+## Hirearchical Approaches
+
+"Walking is a different skill to tying shoelaces." 
+
+Historically hierarchical methods such as gated modular polices - mixture of experts (Nowlan, 1990; Jacobs et al., 1991), or task and motion planning (TAML). Have been used to compose smaller models orchestrated by a high level planner. Given the gains and availabliltiy of large langage models, it should be feasible to use a large capable model to break a long horizon task down into sub tasks that are shorter and exectuted on smaller models. This would lever the capability and availability of very large LLM models in the cloud where latency is not a factor, and combine it with high frequency local control on constrained hardware and to train on hardware more easily available to the "home gamer".
+
+Hoi Fai Yu and Abdulrahman Altahhan (2025) used hirearchical approach to learn an optimal policy between pushing and grabbing a target. They bootstrap two seperate low level models using BC to competence and then introduce a third controller model and use RL to learn the optimal strategy.  
 
 ## Proposal
 
-Walking is a different skill to tying shoelaces.
-
-Use ACT as a basis for a model to learn position-invariant subtasks. Use a larger, more capable LLM to orchestrate those tasks — effectively hoisting the "L" from VLA and handling language-conditioned planning separately.
-
-Long-term horizon problems with Behavioural Cloning include compounding errors (Ross et al., 2011) and multi-modal action distributions. "Blinkering" — the tendency of BC policies to commit to a single mode and ignore alternatives — is a related failure pattern.
+Use a small model to learn position-invariant subtasks. Use a larger, more capable LLM to orchestrate those tasks — effectively hoisting the "L" from VLA and handling language-conditioned planning separately.
 
 ## Setup
 
@@ -46,13 +54,19 @@ A simulation based on the SO-100 MJCF model was built in MuJoCo (Todorov et al.,
 
 The simulation environment was extended using MuJoCo for physics and OpenXR to view the simulation environment through a Meta Quest 3 headset for training. The human expert would move the real leader arm to generate demonstration episodes.
 
-*Note: observed state was used, not the demand, for training — need to verify this.*
+*Note:  as per the ACT paper demand was used for training*
 
 I experimented with training the model in end-effector space, using forward kinematics (FK) during training to convert joint positions to XYZ position and a quaternion orientation. And an inverse kinematics (IK) solver after inference to convert back to joint angles — the idea being that end-effector space would be easier to learn in (cf. Goodfellow et al., 2016, §5.3 on the effect of coordinate representations on learning), and could potentially transfer to other robot topologies without retraining. However, results were inconclusive (see Results) and all remaining experiments were performed in joint space.
 
 ## Delta vs Absolute
 
 *Section to be completed.*
+
+
+TODO investigate training with with temporal ensembling.
+TODO investigate using delta robot positions
+
+
 
 
 References (to be tidied up)
@@ -67,3 +81,6 @@ The 2024 AI Index Report (Stanford HAI, 2024) https://hai.stanford.edu/ai-index/
 "PaliGemma" (Beyer et al., 2024) https://arxiv.org/abs/2407.07726
 Zhou, K., Liu, Z. and Gao, P. (eds.) (2024) Large Vision-Language Models: Pre-training, Prompting, and Applications. Cham: Springer
 OpenVLA (Kim et al., 2024) https://arxiv.org/abs/2406.09246
+
+Integrated Task and
+Motion Planning (Garrett et al ) https://arxiv.org/pdf/2010.01083
